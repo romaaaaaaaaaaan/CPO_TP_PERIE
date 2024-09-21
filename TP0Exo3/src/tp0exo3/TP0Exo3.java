@@ -26,7 +26,16 @@ public class TP0Exo3 {
         int op;
         Scanner sc = new Scanner(System.in); 
         op = sc.nextInt();
-        
+        if(op<=0)
+        {
+            System.out.println("l'operateur doit être compris entre 1 et 5");
+            System.exit(0);
+        }
+        if(op>=6)
+        {
+            System.out.println("l'operateur doit être compris entre 1 et 5");
+            System.exit(0);
+        }
         int operande1;
         int operande2;
         System.out.println("saisissez une première valeure");
@@ -35,7 +44,31 @@ public class TP0Exo3 {
         
         System.out.println("saisissez une deuxième valeure");
         Scanner sc2 = new Scanner(System.in);
-        operande1 = sc2.nextInt();
+        operande2 = sc2.nextInt();
+        float result = 0;
+        if(op ==1)
+        {
+            result= operande1+operande2;
+        } else if(op==2)
+        {
+            result=operande1-operande2;
+
+        }
+        else if(op==3)
+        {
+            result=operande1*operande2;
+        }
+        else if(op==4)
+        {
+            result=operande1/operande2;
+        }
+        else if(op==5)
+        {
+            result=operande1%operande2;
+        }
+        
+        System.out.println("le resultat est"+result);
+                
     }
     
 }
